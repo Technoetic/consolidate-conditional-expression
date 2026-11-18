@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="app-build" content="__BUILD_ID__">
+  <meta name="theme-color" content="#101f2b">
+  <meta name="description" content="강풍·안개·항로 폐쇄를 조작하며 조건식 통합하기를 배우는 인터랙티브 리팩토링 실습. 8가지 입력으로 기존 코드와 통합한 코드의 결과를 비교합니다.">
+  <title>출항 관제실 · 조건식 통합하기</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f2633'/%3E%3Cpath d='m16 4 5 5H11zM13 10h6v4h-6zM13 15h6l3 12H10z' fill='%23ffa569'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles/tokens.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/components.css">
+  <script type="module" src="./src/main.mjs"></script>
+</head>
+<body data-screen="observe">
+  <a class="skip-link" href="#workspace" onclick="event.preventDefault(); document.getElementById('workspace').focus()">실습으로 건너뛰기</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#/observe"><span class="brand-mark"><svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 25 2.5-13h7L22 25M11 12h10M13 12V8h6v4M11.5 8 16 4l4.5 4M8 26h16M6.5 10l-3 1M25.5 10l3 1M8 6 5 4.5M24 6l3-1.5M12 20l8-3"/></svg></span><strong>출항 관제실</strong></a>
+      <a class="source-link" href="https://refactoring.com/catalog/consolidateConditionalExpression.html" target="_blank" rel="noopener noreferrer">파울러의 원문 <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="hero-kicker" lang="en">Consolidate Conditional Expression</p>
+        <h1 id="hero-title">여러 조건을,<br><em>하나의 판단으로.</em></h1>
+        <p class="hero-desc">오늘 배는 출항할 수 있을까요? 항구의 세 가지 신호를 조작하며 같은 결론을 내리는 조건식을 하나로 묶어 보세요.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true"><img src="./assets/harbor.webp" width="1440" height="720" alt="" fetchpriority="high"></div>
+    </section>
+    <nav class="lesson-tabs" aria-label="실습 단계">
+      <a class="tab-link" href="#/observe" aria-current="page"><span class="tab-num">01</span><span class="tab-label">신호 관찰</span></a>
+      <a class="tab-link" href="#/combine"><span class="tab-num">02</span><span class="tab-label">조건 묶기</span></a>
+      <a class="tab-link" href="#/verify"><span class="tab-num">03</span><span class="tab-label">결과 검증</span></a>
+    </nav>
+    <p id="runtime-status" role="status" aria-live="polite"></p>
+    <div id="workspace" class="workspace" tabindex="-1"></div>
+    <noscript>실습의 신호와 조건식을 조작하려면 브라우저에서 자바스크립트를 켜 주세요.</noscript>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>출항 관제실</span><a href="https://github.com/Technoetic/consolidate-conditional-expression">소스 코드 <span aria-hidden="true">↗</span></a></div></footer>
+</body>
+</html>
